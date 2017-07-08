@@ -22,10 +22,14 @@
                 <div class="form-group">
                     {{title}}
                 </div>
-                <!-- Imported Child component-->
-                <div class="form-group" *ngIf="submitted">
-                <child-app [title]="title"></child-app>
+                <!-- Template Attribute-->
+                <div class="form-group"  template="ngIf submitted">
+                <child-app [title]="title">Template Attribute</child-app>
                 </div>
+                 <!-- Template Element-->
+                 <template [ngIf]="submitted">
+                     <child-app [title]="title">Template Element</child-app>
+                 </template>
             </div>
         </div>
         <!-- /.col-xs-12 -->
