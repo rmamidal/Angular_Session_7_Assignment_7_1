@@ -7,7 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class ChildComponent implements OnInit {
-
     @Input() title;
 
     // Public Variable.

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="form-wrap">
-                <h1>My Binding Application</h1>
+                <h1>My Directive Application</h1>
                 <form role="form">
                     <!-- First Name TextBox with Two-way Binding-->
                     <div class="form-group">
@@ -19,12 +19,9 @@
                     <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Create Title" (click)="createTitle(first.value,last.value)">
                 </form>
                 <hr/>
-                <div class="form-group">
-                    {{title}}
-                </div>
                 <!-- Template Attribute-->
                 <div class="form-group"  template="ngIf submitted">
-                <child-app [title]="title">Template Attribute</child-app>
+                    <child-app [title]="title">Template Attribute</child-app>
                 </div>
                  <!-- Template Element-->
                  <template [ngIf]="submitted">
